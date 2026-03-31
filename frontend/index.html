@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Netflix Clone</title>
+</head>
+<body>
+  <h1>Netflix Movies</h1>
+  <ul id="movies"></ul>
+
+  <script>
+    fetch('/api/movies')
+      .then(res => res.json())
+      .then(data => {
+        let list = document.getElementById('movies');
+        data.forEach(movie => {
+          let li = document.createElement('li');
+          li.innerText = movie.name;
+          list.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>
