@@ -9,7 +9,7 @@ pipeline {
 
         stage('Clone Code') {
             steps {
-                git 'https://github.com/Rajeev151124/netflix-devops.git'
+                git branch: 'main', 'https://github.com/Rajeev151124/netflix-devops.git'
             }
         }
 
