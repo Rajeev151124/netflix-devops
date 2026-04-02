@@ -46,6 +46,8 @@ pipeline {
                 sh '''
                 export KUBECONFIG=/var/lib/jenkins/.kube/config
                 kubectl apply -f k8s/
+                kubectl rollout restart deployment frontend
+                kubectl rollout restart deployment backend
                 '''
             }
         }
