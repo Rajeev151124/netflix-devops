@@ -15,6 +15,6 @@ spec:
       containers:
       - name: frontend
         image: rajeevreddy1511/netflix-frontend
-        imagepullpolicy: Always  
+        imagePullPolicy: Always  
         ports:
         - containerPort: 80
